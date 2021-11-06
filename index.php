@@ -84,10 +84,16 @@ if ($WHERE_AM_I == 'page') {
 ?>
 </main>
 
-<footer class="footer bg-dark">
-    <div class="container">
-        <p class="m-0 text-center text-white text-uppercase"><?php echo $site->footer(); ?><span class="ml-5 text-warning">Powered by<img class="mini-logo" src="<?php echo DOMAIN_THEME_IMG.'favicon.png'; ?>"/><a target="_blank" class="text-white" href="https://www.bludit.com">Bludit</a></span></p>
-    </div>
+<footer class="container">
+
+    <p>
+        <strong><?php echo $site->footer(); ?></strong>
+    </p>
+
+    <p>
+        <small>Powered by<img class="mini-logo" src="<?php echo DOMAIN_THEME_IMG.'favicon.png'; ?>"/> <a target="_blank" class="text-white" href="https://www.bludit
+        .com">Bludit</a> - Design by <a href="https://eiweleit.de" title="Author of the Design">basteyy</a></small>
+    </p>
 </footer>
 
 <?php Theme::plugins('siteBodyEnd'); ?>

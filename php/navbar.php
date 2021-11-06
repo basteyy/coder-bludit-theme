@@ -3,36 +3,30 @@
         <?php echo $site->title() ?>
     </a>
 
-    <ul>
+    <ul id="_menue">
+        <li><a href="#_menue">&#9776;</a></li>
+        <li><a href="#">&#x2715;</a></li>
         <?php foreach ($staticContent as $staticPage): ?>
-            <li >
+            <li>
                 <a href="<?php echo $staticPage->permalink() ?>"><?php echo $staticPage->title() ?></a>
             </li>
         <?php endforeach ?>
 
-        <?php foreach (Theme::socialNetworks() as $key=>$label): ?>
-            <li>
-                <a href="<?php echo $site->{$key}(); ?>" target="_blank">
-                    <span class="d-inline d-sm-none"><?php echo $label; ?></span>
-                </a>
-            </li>
-        <?php endforeach; ?>
+        <?php
+         $socials = false;
+
+         foreach (Theme::socialNetworks() as $key=>$label) {
+            $socials .= sprintf('<li><a href="%s" target="_blank">%s</a></li>', $site->{$key}(), $label);
+            }
+
+         if($socials) : ?>
+        <li class="--social">
+            <a href="#_socials">Social</a>
+            <ul id="_socials">
+                <li><a href="#">&#x2715</a></li>
+                <?= $socials ?>
+            </ul>
+        </li>
+        <?php endif; ?>
     </ul>
 </nav>
-<!--
-
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-uppercase">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-
-
-
-            </ul>
-        </div>
-    </div>
-</nav>
--->
