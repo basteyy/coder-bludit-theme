@@ -1,5 +1,5 @@
-<video playsinline autoplay muted loop poster="https://eiweleit.de/assets/media/images/coding_sequences.jpg">
-    <source src="https://eiweleit.de/assets/media/video/coding_sequences.mp4" type="video/mp4">
+<video playsinline autoplay muted loop poster="<?= DOMAIN_THEME_IMG ?>coding_sequences.jpg">
+    <source src="<?= DOMAIN_THEME_IMG ?>coding_sequences.mp4" type="video/mp4">
 </video>
 <header class="container">
     <strong><?= $site->title() ?></strong>

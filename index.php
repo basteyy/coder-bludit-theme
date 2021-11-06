@@ -1,6 +1,7 @@
 <?php
     declare(strict_types=1);
 
+    // The following is just for development ;)
     // Compile Sass
     if(file_exists(__DIR__ . '/vendor/autoload.php')) {
 
