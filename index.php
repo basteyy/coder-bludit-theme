@@ -93,7 +93,7 @@ if ($WHERE_AM_I == 'page') {
 
     <p>
         <small>Powered by<img class="mini-logo" src="<?php echo DOMAIN_THEME_IMG.'favicon.png'; ?>"/> <a target="_blank" class="text-white" href="https://www.bludit
-        .com">Bludit</a> - Design by <a href="https://eiweleit.de" title="Author of the Design">basteyy</a></small>
+        .com">Bludit</a> - Design by <a href="https://xzit.online" title="Author of the Design">basteyy</a></small>
     </p>
 </footer>
 
